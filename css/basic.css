@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@charset "UTF-8"
+    
+/*reset*/
+    * {margin: 0; padding: 0;}
+    *::selection {background: #fff; color: #111;}
+/*    *::selection {background: transparent; color: inherit;}*/
+    html, body {margin: 0; padding: 0; width: 100%; height: 100%;}
+    body {background: #111; color: #fff; font-size: 14px; font-family: Arial, Helvetica, sans-serif;font-weight: normal;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+    body::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera*/
+    }
+    ul, ol, li {list-style: none; margin: 0; padding: 0; vertical-align: middle;}
+    h1, h2, h3, h4, h5, h6 {margin: 0;}
+    a {text-decoration: none; cursor: pointer;}
+a, a:active, a:visited {color: inherit;}
+/*---/reset/---*/
+
+
+/*HEADER*/
+header h1 {
+    width: 40px; height: 37px;
+    position: fixed; top: 30px; left: 38px;
+    z-index: 50;
+}
+header h1 a {display: block; width: 100%; height: 100%; margin: 0; line-height: 1; color: #eee;}
+header h1 a img {display: block; height: 100%;}
+/*---/header/---*/
+
+
+/*NAV*/
+#scroll {width: 4px; height: 270px; position: fixed; left: 50px; top: calc(50% - 135px); background-color: transparent; overflow: hidden; z-index: 49;}
+.nav-scroll {width: 100%; height: 35px; background-color: rgba(255, 255, 255, 0.3); cursor: pointer;}
+.nav-scroll.middle {height: 200px;}
+.nav-bar {width: 100%; height: 200px; background-color: #fff; cursor: inherit; position: absolute; left: 0; top: 0; cursor: grab;}
+.nav-bar:active {cursor: grabbing;}
+
+#menu {position: fixed; left: 80px; top: calc(50% - 135px); z-index: 48;}
+.nav-menu {font-family: 'arita-dotum-light'; font-size: 16px; color: #eee; height: 35px; transition: all 1s;}
+.nav-menu.on {font-family: 'arita-dotum-semibold'; font-weight: normal; height: 200px;}
+.nav-menu > span {cursor: pointer;}
+.nav-menu > span+span {margin-left: 8px;}
+/*---/nav/---*/
+
+
+/*CONTAINER*/
+#container {width: 100%; height: 100%;}
+section {display: block; width: 100%; height: 100%; overflow: hidden; margin: 0 auto; transition: all 1s; background-color: #111; position: relative;}
+    /*
+    .sec2 {background-color: #222;}
+    .sec3 {background-color: #222;}
+    */
+section h3 {width: 100%; text-align: center; line-height: 1; font-size: 50px; font-family: 'arita-dotum-thin'; font-weight: bolder; display: none; position: fixed; top: 90px; opacity: 0; cursor: none; z-index: 45;
+/*-webkit-text-stroke-width: 1px;*/
+color: transparent;
+-webkit-text-fill-color: transparent;
+-webkit-background-clip: text;
+background-clip: text;
+background-repeat: no-repeat;
+background-image: linear-gradient(125deg, transparent 0%, transparent 30%, #fff 30.1%, #fff 70%, transparent 70.1%);
+background-size: 0% 100%;
+}
+section h3.on {display: block; transition: 1.8s; animation: FadeSwipe 1.8s; opacity: 1; background-size: 100% 100%;}
+.cont {opacity: 0;}
+.cont.on {animation: FadeIn 2s; opacity: 1;}
+
+/* /--- .sec1 */
+.sec1 .head1 {width: 100%; text-align: center; line-height: 1; font-size: 42px; font-family: 'arita-dotum-thin'; font-weight: normal; color: #fff; transition-delay: 0.2s; position: fixed; top: 46vh; letter-spacing: 0.09em;}
+.sec1 .head2 {width: 100%; text-align: center; line-height: 1; font-size: 30px; font-family: 'arita-dotum-thin'; font-weight: normal; color: #fff; transition-delay: 0.4s; position: fixed; top: calc(46vh + 46px); letter-spacing: 0.02em;}
+.sec1 .insideBox {width: 100%; height: 100%; margin: 0 auto; box-sizing: border-box; background: url('../img/backimg_section.jpg') no-repeat center; background-size: cover; opacity: 0;}
+.sec1 .insideBox.on {position: fixed; left: 0; top: 0; right: 0; bottom: 0; opacity: 1; z-index: 40; transition: all 0.7s;}
+
+/* /--- .sec2 */
+.sec2 .progress {width: 780px; margin: 260px auto 0;}
+.sec2 .progress .skills {width: 100%; margin-bottom: 20vh;}
+.sec2 .progress .doThis { display: inline-block; background-color: #111; border: 1px solid #aaa; margin-right: 1%; margin-bottom: 1%; color: #aaa; cursor: pointer; font-family: 'arita-dotum-medium'; font-weight: normal; text-align: center; line-height: 2.5; width: 18.9%; float: left;}
+.sec2 .progress .doThis.show {color: #fff; border-color: #fff; font-family: 'arita-dotum-semibold';}
+.sec2 .progress .skills:after {content: ""; display: block; clear: both;}
+    /*  선형 그래프  */
+.sec2 .progress .linear-progress {width: 100%; margin-bottom: 6vh;}
+.sec2 .progress .title {margin: 0; line-height: 1.5; font-size: 16px; font-family: 'arita-dotum-semibold'; font-weight: normal; display: inline-block;}
+.sec2 .progress .info {margin: 0; line-height: 2.1; font-size: 14px; font-family: 'arita-dotum-medium'; font-weight: normal; float: right;}
+.sec2 .progress .back {width: 100%; height: 6px; margin-top: 7px; background: #333;}
+.sec2 .progress .bar {width: 10px; height: 6px; background: #aaa;}
+.sec2 .progress .shadow {width: 10px; opacity: .8;
+transform: skew(15deg); /* Standard syntax */
+-ms-transform: skew(15deg); /* IE 9 */
+transform-origin: 0 0;
+background: -moz-linear-gradient(top,  #555, transparent); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #555, transparent); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #555, transparent); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+/* /--- .sec3 */
+.sec3 .ex {width: 100%; height: 80%; margin: 20vh auto 0; overflow: hidden; position: relative;}
+.sec3 .ex .showCase {width: 100%; height: 100%; position: absolute; top: 0; left: 0;}
+.sec3 .ex .showCase li {display: none;}
+.sec3 .ex .showCase .center {display: block; width: 50%; height: auto; margin-left: -25%; position: absolute; left: 50%;}
+.sec3 .ex .showCase .right {display: block; width: 50%; height: auto; margin-left: -25%; position: absolute; left: 100%;}
+.sec3 .ex .showCase .left {display: block; width: 50%; height: auto; margin-left: -25%; position: absolute; left: 0%;}
+.sec3 .ex .showCase .innerCase {width: auto; height: auto; margin: 10vh 10% 0;}
+.sec3 .ex .showCase .innerCase .mainImg {width: 100%; height: auto; opacity: 0.4;}
+.sec3 .ex .showCase .innerCase .pin {width: 100%; height: 100%; position: absolute; top: 0; left: 0; display: none;}
+    /*  r가운데  */
+.sec3 .ex .showCase .center .innerCase {position: relative;}
+.sec3 .ex .showCase .center .innerCase .mainImg {display: block; opacity: 0.8; box-shadow: 0px 0px 70px #555;}
+.sec3 .ex .showCase .center .innerCase .pin {width: 100%; height: auto; position: absolute; top: 0; left: 0;display: block;}
+
+.sec3 .ex .showCase .center .innerCase:hover .mainImg {opacity: 0.4; box-shadow: none;}
+.sec3 .ex .showCase .center .innerCase:hover .pin {opacity: 0;}
+.sec3 .ex .showCase .center .innerCase:hover .innerTxt {display: block; width: 100%; position: absolute; top: 47%; text-align: center; box-sizing: border-box; font-family: 'arita-dotum-medium'; font-weight: normal; font-size: 18px; text-shadow: 0px 1px 4px rgba(30, 30, 30, 0.8); color: #ddd;}
+
+.sec3 .ex .showCase .center .innerCase .innerTxt a {margin-left: 12px;}
+.sec3 .ex .showCase .innerCase .innerTxt {display: none;}
+    /*  화살표  */
+.sec3 .arr {width: 100%; height: auto; position: absolute; left: 0; right: 0; top: 87vh; text-align: center; opacity: 0.6;}
+.sec3 .arr:hover {opacity: 0.9;}
+.sec3 .arr span {opacity: 0.7;}
+.sec3 .arr span:hover {opacity: 1;}
+.sec3 .arr span.left {cursor: pointer; margin-right: 10px;}
+.sec3 .arr span.right {cursor: pointer; margin-right: 0;}
+/*---/container/---*/
+
+
+/*FOOTER*/
+#toggleBtn {display: none;}
+footer {width: 100%; position: fixed; bottom: 20px; left: 0; text-align: center; line-height: 1.1; overflow: hidden;}
+footer h5 {font-size: 24px; font-family: 'arita-dotum-thin'; font-weight: normal; letter-spacing: 2px; margin: 0;}
+footer p {margin: 0 0 5px; font-size: 16px; font-family: 'arita-dotum-thin'; font-weight: normal; color: #fff; letter-spacing: 2px;}
+footer a {color: #fff; font-family: 'arita-dotum-semibold';}
+footer a:hover {text-decoration: underline;}
+footer span:after {content: ""; display: inline-block; width: 20px; height: 5px; border-top: 1px solid #aaa; margin: 0 6px 0 5px; box-sizing: border-box;}
+/*---/footer/---*/
+
+
+
+@media screen and (min-width:1025px) {
+    
+    /*container*/
+    /* /--- .sec2 */
+    .sec2 .progress .doThis:nth-child(5n) {margin-right: 0;}
+}
+
+
+@media screen and (max-width:1024px) and (min-width:768px) {
+    /*HEADER*/
+    header h1 {top: 26px; left: 32px;}
+    
+    /*NAV*/
+    #scroll {display: none; visibility: hidden;}
+    #menu {top: 36px; left: 78%;}
+    .nav-menu {font-size: 28px; line-height: 1; height: 28px; display: inline-block; width: 50px; color: #eee;}
+    .nav-menu span+span {display: none;}
+    .nav-menu.on {height: 28px;}
+    .nav-menu.on span {position: relative;}
+    .nav-menu.on span:after {content: ""; display: block; animation: under-bar 0.5s; width: 16px; height: 4px; background-color: #eee; position: absolute; left: 0; top: 20px;}
+    
+    
+    /*CONTAINER*/
+    section h3 {font-size: 48px;}
+    
+    /* /--- .sec2 */
+    .sec2 .progress {width: 70%;}
+    .sec2 .progress .skills {margin-bottom: 16.2vh;}
+    .sec2 .progress .doThis {width: 23.8%; margin-right: 1.1%;}
+    .sec2 .progress .doThis:nth-child(4n) {margin-right: 0;}
+    
+    /* /--- .sec3 */
+    .sec3 .ex {margin: 15vh auto 0;}
+    .sec3 .ex .showCase .innerCase {width: 60%; margin: 10vh auto 0;}
+    
+    .sec3 .ex .showCase .center .innerCase:hover .innerTxt {top: 42%;}
+    .sec3 .ex .showCase .center .innerCase .innerTxt a {display: block; margin-left: 0; margin-top: 12px;}
+    /* ++ css 작성 ++ */
+    
+    .sec3 .arr {top: 88vh;}
+    .sec3 .arr span.left {margin-right: 16px;}
+    
+}
+
+
+@media screen and (max-width:767px) {
+    /*HEADER*/
+    header h1 {top: 20px; left: 26px; height: 33px;}
+    header h1 a {font-size: 34px;}
+    
+    /*NAV*/
+    #scroll {display: none; visibility: hidden;}
+    #menu {top: 22px; left: 58%;}
+    .nav-menu {font-size: 28px; line-height: 1; height: 28px; display: inline-block; width: 12.5vw; color: #ccc;}
+    .nav-menu span+span {display: none;}
+    .nav-menu.on {height: 28px;}
+    .nav-menu.on span {position: relative;}
+    .nav-menu.on span:after {content: ""; display: block; animation: under-bar 0.5s; width: 16px; height: 4px; background-color: #ccc; position: absolute; left: 0; top: 20px;}
+    
+    /*CONTAINER*/
+    section h3 {font-size: 36px;}
+    
+    /* /--- .sec2 */
+    .sec2 .progress {width: 80%; margin-top: 180px;}
+    .sec2 .progress .skills {margin-bottom: 6vh;}
+    .sec2 .progress .doThis {width: 47.5%; line-height: 2; margin-right: 1.2%; margin-bottom: 2%;}
+    .sec2 .progress .doThis:nth-child(2n) {margin-right: 0;}
+    
+    /* /--- .sec3 */
+    .sec3 .ex {margin: 20vh auto 0;}
+    
+    .sec3 .ex .showCase .center .innerCase:hover .innerTxt {top: 42%;}
+    .sec3 .ex .showCase .center .innerCase .innerTxt a {display: block; margin-left: 0; margin-top: 12px;}
+    /* ++ css 작성 ++ */
+    
+    .sec3 .arr {top: 82vh;}
+    .sec3 .arr span.left {margin-right: 20px;}
+    
+    
+    /*FOOTER*/
+    footer h5 {font-size: 4.8vw;}
+    footer p {font-size: 3.6vw;}
+    footer span:after {height: 0.9vw;}
+}
+
+
+/* ANIMATION */
+@keyframes FadeSwipe {
+    0% {opacity: 0; background-size: 0% 100%;}
+    20% {opacity: 1;}
+    100% {opacity: 1; background-size: 100% 100%;}
+}
+
+@keyframes FadeIn { 0% {opacity: 0;} 100% {opacity: 1;} }
+
+@keyframes under-bar { 0% { width: 0; } 100% { width: 16px; } }
+/*---/animation/---*/
+
+
+
+
+
+

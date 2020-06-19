@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
+    <title>이 나 연 | Yi Na Yeon</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="https://kit.fontawesome.com/5d65a7ae82.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+   
+<!-- HEADER -->
+<header>
+    <h1><a onclick="$('html, body').stop().animate({scrollTop:0},700);"><img src="img/logo-01.png" alt="이"></a></h1>
+</header>
+<!-- 헤더 끝// -->
+
+<!-- NAVIGATION -->
+<nav>
+    <div id="scroll">
+        <div class="nav-scroll"></div>
+        <div class="nav-scroll middle"></div>
+        <div class="nav-scroll"></div>
+        <div id="bar" class="nav-bar"></div>
+    </div>
+    <div id="menu">
+        <div class="nav-menu on"><span>1</span></div>
+        <div class="nav-menu"><span>2</span><span>활용</span></div>
+        <div class="nav-menu"><span>3</span><span>프로젝트</span></div>
+    </div>
+</nav>
+<!-- 네비게이션 끝// -->
+
+<!-- SECTION -->
+<div id="container">
+    <section class="sec1">
+        <div class="insideBox on">
+            <h4 class="box head1">portfolio</h4>
+            <h5 class="box head2">yi&nbsp;na-yeon</h5>
+        </div>
+    </section><!-- SEC1 //-->
+    
+    <section class="sec2">
+        <h3>활용</h3>
+        <div class="cont progress">
+            <div class="skills">
+                <ul>
+                    <li class="doThis show" data-percentage="99">Photoshop</li>
+                    <li class="doThis" data-percentage="98">illustrator</li>
+                    <li class="doThis" data-percentage="95">HTML5</li>
+                    <li class="doThis" data-percentage="96">CSS3</li>
+                    <li class="doThis" data-percentage="93">반응형 웹</li>
+                    <li class="doThis" data-percentage="90">Javascript</li>
+                    <li class="doThis" data-percentage="92">jQuery</li>
+                    <li class="doThis" data-percentage="88">JSP</li>
+                    <li class="doThis" data-percentage="85">Servelet</li>
+                    <li class="doThis" data-percentage="83">Oracle Database</li>
+                </ul>
+            </div>
+            <div class="linear-progress">
+	            <p class="title"></p>
+                <span class="info"></span>
+                <div class="back">
+                    <div class="bar"></div>
+                </div>
+	        </div>
+<!--
+            <div class="linear-progress" data-percentage="99">
+                <p class="title">Photoshop / illustration</p>
+                <span class="info"></span>
+                <div class="back">
+                    <div class="bar"></div>
+                </div>
+            </div>
+	        <div class="linear-progress" data-percentage="95">
+	            <p class="title">HTML5 / CSS3</p>
+                <span class="info"></span>
+                <div class="back">
+                    <div class="bar"></div>
+                </div>
+	        </div>
+	        <div class="linear-progress" data-percentage="92">
+                <p class="title">반응형 웹</p>
+                <span class="info"></span>
+                <div class="back">
+                    <div class="bar"></div>
+                </div>
+            </div>
+            <div class="linear-progress" data-percentage="90">
+                <p class="title">Javascript / jQuery</p>
+                <span class="info"></span>
+                <div class="back">
+                    <div class="bar"></div>
+                </div>
+            </div>
+	        <div class="linear-progress" data-percentage="88">
+	            <p class="title">JSP / Servelet</p>
+                <span class="info"></span>
+                <div class="back">
+                    <div class="bar"></div>
+                </div>
+	        </div>
+	        <div class="linear-progress" data-percentage="80">
+	            <p class="title">Oracle Database</p>
+                <span class="info"></span>
+                <div class="back">
+                    <div class="bar"></div>
+                </div>
+	        </div>
+-->
+        </div>
+    </section><!-- SEC2 //-->
+    
+    <section class="sec3">
+        <h3>프로젝트</h3>
+        <div class="cont ex">
+            <ul class="showCase">
+                <li class="center" data-number="1">DESIGN SAMSUNG</li>
+                <li class="right" data-number="2">LEGO korea</li>
+                <li class="left" data-number="3">Project3</li>
+            <!--
+                <li class="center">
+                    <div class="innerCase">
+                        <img class="mainImg img2" src="img/portfolio2-main.jpg" alt="user809-git.github.io/portfolio2/">
+                        <img class="pin" src="img/on-light.png">
+                        <div class="innerTxt">
+                            <span>LEGO korea</span>
+                            <a href="https://user809-git.github.io/portfolio2/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="right">
+                    <div class="innerCase">
+                        <img class="mainImg img1" src="img/portfolio1-main.jpg" alt="user809-git.github.io/portfolio1/">
+                        <img class="pin" src="img/on-light.png">
+                        <div class="innerTxt">
+                            <span>DESIGN SAMSUNG</span>
+                            <a href="https://user809-git.github.io/portfolio1/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="">
+                    <div class="innerCase">
+                        <img class="mainImg img2" src="img/portfolio2-main.jpg" alt="user809-git.github.io/portfolio2/">
+                        <img class="pin" src="img/on-light.png">
+                        <div class="innerTxt">
+                            <span>LEGO korea</span>
+                            <a href="https://user809-git.github.io/portfolio2/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </li>
+                -->
+            </ul>
+        </div>
+        <div class="cont arr">
+            <span class="left"><img src="img/arr_1_ll.png" alt="왼쪽으로 넘김"></span>
+            <span  class="right"><img src="img/arr_1_rr.png" alt="오른쪽으로 넘김"></span>
+        </div>
+    </section><!-- SEC3 //-->
+</div>
+<!-- 섹션 끝// -->
+   
+<!-- FOOTER -->
+<footer>
+    <h5>CONTACT</h5>
+    <p><span>mail</span><a href="mailto:mimmyeonny@gmail.com">mimmyeonny@gmail.com</a></p>
+    <p></p>
+</footer>
+<!-- 푸터 끝// -->
+    
+</body>
+</html>
+
+
+
+
