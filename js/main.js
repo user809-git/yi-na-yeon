@@ -166,7 +166,7 @@ $(document).ready(function(){
         var num = $(this).data("number");
         var Txt = $(this).text();
         
-        if($("section").outerWidth() > 1024) {
+//        if($("section").outerWidth() > 1024) {
             var showCase = '<div class="innerCase">'
                         + '<img class="mainImg img2" src="img/portfolio'+ num +'-main.jpg" alt="user809-git.github.io/portfolio' + num +'">'
                         + '<img class="pin" src="img/on-light.png">'
@@ -178,18 +178,18 @@ $(document).ready(function(){
         
             $(this).html(showCase);
             
-        } else {
-            var showCase = '<div class="innerCase">'
-                        + '<img class="mainImg img2" src="img/portfolio'+ num +'-mobile.jpg" alt="user809-git.github.io/portfolio' + num +'">'
-                        + '<img class="pin" src="img/on-light-one.png">'
-                        + '<div class="innerTxt">'
-                        + ' <span>' + Txt + '</span>'
-                        + ' <a href="https://user809-git.github.io/portfolio' + num + '/" target="_blank"><i class="fas fa-external-link-alt"></i></a>'
-                        + '</div>'
-                        + '</div>';
-        
-            $(this).html(showCase);
-        }
+//        } else {
+//            var showCase = '<div class="innerCase">'
+//                        + '<img class="mainImg img2" src="img/portfolio'+ num +'-mobile.jpg" alt="user809-git.github.io/portfolio' + num +'">'
+//                        + '<img class="pin" src="img/on-light-one.png">'
+//                        + '<div class="innerTxt">'
+//                        + ' <span>' + Txt + '</span>'
+//                        + ' <a href="https://user809-git.github.io/portfolio' + num + '/" target="_blank"><i class="fas fa-external-link-alt"></i></a>'
+//                        + '</div>'
+//                        + '</div>';
+//        
+//            $(this).html(showCase);
+//        }
         
     });
     

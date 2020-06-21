@@ -6,13 +6,7 @@
     *::selection {background: #fff; color: #111;}
 /*    *::selection {background: transparent; color: inherit;}*/
     html, body {margin: 0; padding: 0; width: 100%; height: 100%;}
-    body {background: #111; color: #fff; font-size: 14px; font-family: Arial, Helvetica, sans-serif;font-weight: normal;
-        -ms-overflow-style: none; /* IE and Edge */
-        scrollbar-width: none; /* Firefox */
-    }
-    body::-webkit-scrollbar {
-        display: none; /* Chrome, Safari, Opera*/
-    }
+    body {background: #111; color: #fff; font-size: 14px; font-family: Arial, Helvetica, sans-serif;font-weight: normal;}
     ul, ol, li {list-style: none; margin: 0; padding: 0; vertical-align: middle;}
     h1, h2, h3, h4, h5, h6 {margin: 0;}
     a {text-decoration: none; cursor: pointer;}
@@ -138,6 +132,13 @@ footer span:after {content: ""; display: inline-block; width: 20px; height: 5px;
 
 
 @media screen and (min-width:1025px) {
+    body {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+    body::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera*/
+    }
     
     /*container*/
     /* /--- .sec2 */
