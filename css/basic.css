@@ -95,20 +95,14 @@ background: linear-gradient(to bottom,  #555, transparent); /* W3C, IE10+, FF16+
 .sec3 .ex .showCase .center {display: block; width: 50%; height: auto; margin-left: -25%; position: absolute; left: 50%;}
 .sec3 .ex .showCase .right {display: block; width: 50%; height: auto; margin-left: -25%; position: absolute; left: 100%;}
 .sec3 .ex .showCase .left {display: block; width: 50%; height: auto; margin-left: -25%; position: absolute; left: 0%;}
+
 .sec3 .ex .showCase .innerCase {width: auto; height: auto; margin: 10vh 10% 0;}
 .sec3 .ex .showCase .innerCase .mainImg {width: 100%; height: auto; opacity: 0.4;}
 .sec3 .ex .showCase .innerCase .pin {width: 100%; height: 100%; position: absolute; top: 0; left: 0; display: none;}
-    /*  r가운데  */
+    /*  가운데  */
 .sec3 .ex .showCase .center .innerCase {position: relative;}
 .sec3 .ex .showCase .center .innerCase .mainImg {display: block; opacity: 0.8; box-shadow: 0px 0px 70px #555;}
 .sec3 .ex .showCase .center .innerCase .pin {width: 100%; height: auto; position: absolute; top: 0; left: 0;display: block;}
-
-.sec3 .ex .showCase .center .innerCase:hover .mainImg {opacity: 0.4; box-shadow: none;}
-.sec3 .ex .showCase .center .innerCase:hover .pin {opacity: 0;}
-.sec3 .ex .showCase .center .innerCase:hover .innerTxt {display: block; width: 100%; position: absolute; top: 47%; text-align: center; box-sizing: border-box; font-family: 'arita-dotum-medium'; font-weight: normal; font-size: 18px; text-shadow: 0px 1px 4px rgba(30, 30, 30, 0.8); color: #ddd;}
-
-.sec3 .ex .showCase .center .innerCase .innerTxt a {margin-left: 12px;}
-.sec3 .ex .showCase .innerCase .innerTxt {display: none;}
     /*  화살표  */
 .sec3 .arr {width: 100%; height: auto; position: absolute; left: 0; right: 0; top: 87vh; text-align: center; opacity: 0.6;}
 .sec3 .arr:hover {opacity: 0.9;}
@@ -132,6 +126,7 @@ footer span:after {content: ""; display: inline-block; width: 20px; height: 5px;
 
 
 @media screen and (min-width:1025px) {
+    
     body {
         -ms-overflow-style: none; /* IE and Edge */
         scrollbar-width: none; /* Firefox */
@@ -143,6 +138,16 @@ footer span:after {content: ""; display: inline-block; width: 20px; height: 5px;
     /*container*/
     /* /--- .sec2 */
     .sec2 .progress .doThis:nth-child(5n) {margin-right: 0;}
+    
+    /* /--- .sec3 */
+        /*  가운데  */
+    .sec3 .ex .showCase .center .innerCase:hover .mainImg {opacity: 0.4; box-shadow: none;}
+    .sec3 .ex .showCase .center .innerCase:hover .pin {opacity: 0;}
+    .sec3 .ex .showCase .center .innerCase:hover .innerTxt {display: block; width: 100%; position: absolute; top: 47%; text-align: center; box-sizing: border-box; font-family: 'arita-dotum-medium'; font-weight: normal; font-size: 18px; text-shadow: 0px 1px 4px rgba(30, 30, 30, 0.8); color: #ddd;}
+
+    .sec3 .ex .showCase .center .innerCase .innerTxt a {margin-left: 12px;}
+    .sec3 .ex .showCase .innerCase .innerTxt {display: none;}
+    /*---/container/---*/
 }
 
 
@@ -170,12 +175,12 @@ footer span:after {content: ""; display: inline-block; width: 20px; height: 5px;
     .sec2 .progress .doThis:nth-child(4n) {margin-right: 0;}
     
     /* /--- .sec3 */
-    .sec3 .ex {margin: 15vh auto 0;}
-    .sec3 .ex .showCase .innerCase {width: 60%; margin: 10vh auto 0;}
+    .sec3 .ex {margin: 25vh auto 0;}
+    .sec3 .ex .showCase .innerCase {width: 80%; margin: 10vh auto 0;}
+    .sec3 .ex .showCase .innerCase .innerTxt {display: none;}
     
-    .sec3 .ex .showCase .center .innerCase:hover .innerTxt {top: 42%;}
-    .sec3 .ex .showCase .center .innerCase .innerTxt a {display: block; margin-left: 0; margin-top: 12px;}
-    /* ++ css 작성 ++ */
+    .sec3 .ex .showCase .center .innerCase .innerTxt {display: block;  width: 60%; margin: 20px auto; text-align: center;}
+    .sec3 .ex .showCase .center .innerCase .innerTxt a {margin-left: 12px;}
     
     .sec3 .arr {top: 88vh;}
     .sec3 .arr span.left {margin-right: 16px;}
@@ -207,11 +212,13 @@ footer span:after {content: ""; display: inline-block; width: 20px; height: 5px;
     .sec2 .progress .doThis:nth-child(2n) {margin-right: 0;}
     
     /* /--- .sec3 */
-    .sec3 .ex {margin: 20vh auto 0;}
+    .sec3 .ex {margin: 25vh auto 0;}
     
-    .sec3 .ex .showCase .center .innerCase:hover .innerTxt {top: 42%;}
+    .sec3 .ex .showCase .innerCase {width: 90%; margin: 10vh auto 0;}
+    .sec3 .ex .showCase .innerCase .innerTxt {display: none;}
+    
+    .sec3 .ex .showCase .center .innerCase .innerTxt {display: block;  width: 80%; margin: 20px auto; text-align: center;}
     .sec3 .ex .showCase .center .innerCase .innerTxt a {display: block; margin-left: 0; margin-top: 12px;}
-    /* ++ css 작성 ++ */
     
     .sec3 .arr {top: 82vh;}
     .sec3 .arr span.left {margin-right: 20px;}
