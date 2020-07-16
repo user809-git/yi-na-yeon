@@ -81,7 +81,7 @@ section h3.on {display: block; transition: 1.8s; animation: FadeSwipe 1.8s; opac
 .sec1 .insideBox.on {position: fixed; left: 0; top: 0; right: 0; bottom: 0; opacity: 1; z-index: 40; transition: all 0.7s;}
 
 /* /--- .sec2 */
-.sec2 .progress {width: 780px; margin: 260px auto 0;}
+.sec2 .progress {width: 780px; margin: 25vh auto 30vh;}
 .sec2 .progress .skills {width: 100%; margin-bottom: 20vh;}
 .sec2 .progress .doThis { display: inline-block; background-color: #111; border: 1px solid #aaa; margin-right: 1%; margin-bottom: 1%; color: #aaa; cursor: pointer; font-family: 'arita-dotum-medium'; font-weight: normal; text-align: center; line-height: 2.5; width: 18.9%; float: left;}
 .sec2 .progress .doThis.show {color: #fff; border-color: #fff; font-family: 'arita-dotum-semibold';}
