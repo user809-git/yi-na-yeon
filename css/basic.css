@@ -10,8 +10,21 @@
     ul, ol, li {list-style: none; margin: 0; padding: 0; vertical-align: middle;}
     h1, h2, h3, h4, h5, h6 {margin: 0;}
     a {text-decoration: none; cursor: pointer;}
-a, a:active, a:visited {color: inherit;}
+    a, a:active, a:visited {color: inherit;}
 /*---/reset/---*/
+
+
+/* ANIMATION */
+@keyframes FadeSwipe {
+    0% {opacity: 0; background-size: 0% 100%;}
+    20% {opacity: 1;}
+    100% {opacity: 1; background-size: 100% 100%;}
+}
+
+@keyframes FadeIn { 0% {opacity: 0;} 100% {opacity: 1;} }
+
+@keyframes under-bar { 0% { width: 0; } 100% { width: 16px; } }
+/*---/animation/---*/
 
 
 /*HEADER*/
@@ -26,15 +39,15 @@ header h1 a img {display: block; height: 100%;}
 
 
 /*NAV*/
-#scroll {width: 4px; height: 270px; position: fixed; left: 50px; top: calc(50% - 135px); background-color: transparent; overflow: hidden; z-index: 49;}
-.nav-scroll {width: 100%; height: 35px; background-color: rgba(255, 255, 255, 0.3); cursor: pointer;}
-.nav-scroll.middle {height: 200px;}
-.nav-bar {width: 100%; height: 200px; background-color: #fff; cursor: inherit; position: absolute; left: 0; top: 0; cursor: grab;}
-.nav-bar:active {cursor: grabbing;}
+#scroll {width: 4px; height: 200px; position: fixed; left: 40px; top: calc(50% - 135px); background-color: transparent; overflow: hidden; z-index: 49;}
+.nav-scroll {width: 100%; height: 15px; background-color: rgba(255, 255, 255, 0.25); cursor: pointer; transition: all 0.5s}
+.nav-scroll.top,
+.nav-scroll.middle {margin-bottom: 10px;}
+.nav-scroll.on {height: 150px; background-color: rgba(255, 255, 255, 0.7);}
 
-#menu {position: fixed; left: 80px; top: calc(50% - 135px); z-index: 48;}
-.nav-menu {font-family: 'arita-dotum-light'; font-size: 16px; color: #eee; height: 35px; transition: all 1s;}
-.nav-menu.on {font-family: 'arita-dotum-semibold'; font-weight: normal; height: 200px;}
+#menu {position: fixed; left: 60px; top: calc(50% - 135px); z-index: 48;}
+.nav-menu {font-family: 'arita-dotum-light'; font-size: 15px; color: #eee; height: 1em; margin-bottom: 10px; transition: all 0.5s;}
+.nav-menu.on {font-family: 'arita-dotum-semibold'; font-weight: normal; height: 150px;}
 .nav-menu > span {cursor: pointer;}
 .nav-menu > span+span {margin-left: 8px;}
 /*---/nav/---*/
@@ -42,12 +55,12 @@ header h1 a img {display: block; height: 100%;}
 
 /*CONTAINER*/
 #container {width: 100%; height: 100%;}
-section {display: block; width: 100%; height: 100%; overflow: hidden; margin: 0 auto; transition: all 1s; background-color: #111; position: relative;}
+section {display: block; width: 100%; height: auto; overflow: hidden; margin: 0 auto; padding: 200px auto 150px;transition: all 1s; background-color: #111; position: relative;}
     /*
     .sec2 {background-color: #222;}
     .sec3 {background-color: #222;}
     */
-section h3 {width: 100%; text-align: center; line-height: 1; font-size: 50px; font-family: 'arita-dotum-thin'; font-weight: bolder; display: none; position: fixed; top: 90px; opacity: 0; cursor: none; z-index: 45;
+section h3 {width: 100%; text-align: center; line-height: 1; font-size: 50px; font-family: 'arita-dotum-thin'; font-weight: bolder; display: none; position: absolute; top: 90px; opacity: 0; cursor: none; z-index: 45;
 /*-webkit-text-stroke-width: 1px;*/
 color: transparent;
 -webkit-text-fill-color: transparent;
@@ -89,27 +102,24 @@ background: linear-gradient(to bottom,  #555, transparent); /* W3C, IE10+, FF16+
 }
 
 /* /--- .sec3 */
-.sec3 .ex {width: 100%; height: 80%; margin: 20vh auto 0; overflow: hidden; position: relative;}
-.sec3 .ex .showCase {width: 100%; height: 100%; position: absolute; top: 0; left: 0;}
-.sec3 .ex .showCase li {display: none;}
-.sec3 .ex .showCase .center {display: block; width: 50%; height: auto; margin-left: -25%; position: absolute; left: 50%;}
-.sec3 .ex .showCase .right {display: block; width: 50%; height: auto; margin-left: -25%; position: absolute; left: 100%;}
-.sec3 .ex .showCase .left {display: block; width: 50%; height: auto; margin-left: -25%; position: absolute; left: 0%;}
+.sec3 .ex {width: 100%; min-height: 100vh; height: auto; margin: 20vh auto; overflow: hidden; position: relative;}
+.sec3 .ex .pages {width: 80%; height: 100%; margin: 0 auto; font-size: 0;}
+.sec3 .ex .pages li {display: block; width: 48%; height: auto; overflow: hidden; margin: 2% 1%; vertical-align: top; float: left; transition: transform 0.2s ease-in-out;}
+.sec3 .ex .pages li:hover {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+}
 
-.sec3 .ex .showCase .innerCase {width: auto; height: auto; margin: 10vh 10% 0;}
-.sec3 .ex .showCase .innerCase .mainImg {width: 100%; height: auto; opacity: 0.4;}
-.sec3 .ex .showCase .innerCase .pin {width: 100%; height: 100%; position: absolute; top: 0; left: 0; display: none;}
-    /*  가운데  */
-.sec3 .ex .showCase .center .innerCase {position: relative;}
-.sec3 .ex .showCase .center .innerCase .mainImg {display: block; opacity: 0.8; box-shadow: 0px 0px 70px #555;}
-.sec3 .ex .showCase .center .innerCase .pin {width: 100%; height: auto; position: absolute; top: 0; left: 0;display: block;}
-    /*  화살표  */
-.sec3 .arr {width: 100%; height: auto; position: absolute; left: 0; right: 0; top: 87vh; text-align: center; opacity: 0.6;}
-.sec3 .arr:hover {opacity: 0.9;}
-.sec3 .arr span {opacity: 0.7;}
-.sec3 .arr span:hover {opacity: 1;}
-.sec3 .arr span.left {cursor: pointer; margin-right: 10px;}
-.sec3 .arr span.right {cursor: pointer; margin-right: 0;}
+.sec3 .ex .pages li .innerCase {width: 100%; position: relative; overflow: hidden;}
+.sec3 .ex .pages li .mainImg {width: 100%; opacity: 0.6;}
+.sec3 .ex .pages li:hover .mainImg {opacity: 0.8;}
+.sec3 .ex .pages li .innerTxt {width: 100%; height: 100%; font-size: 1vw; text-align: center; position: absolute; top: 47%; text-shadow: 0px 1px 3px #111; opacity: 0; transition: transform 0.2s ease-in-out, opacity 0.1s ease-in;}
+.sec3 .ex .pages li .innerTxt span {font-family: 'arita-dotum-bold';}
+.sec3 .ex .pages li:hover .innerTxt {
+    opacity: 1;
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+}
 /*---/container/---*/
 
 
@@ -127,27 +137,17 @@ footer span:after {content: ""; display: inline-block; width: 20px; height: 5px;
 
 @media screen and (min-width:1025px) {
     
-    body {
-        -ms-overflow-style: none; /* IE and Edge */
-        scrollbar-width: none; /* Firefox */
+    /*body {
+        -ms-overflow-style: none;  IE and Edge 
+        scrollbar-width: none;  Firefox 
     }
     body::-webkit-scrollbar {
-        display: none; /* Chrome, Safari, Opera*/
-    }
+        display: none;  Chrome, Safari, Opera
+    }*/
     
     /*container*/
     /* /--- .sec2 */
     .sec2 .progress .doThis:nth-child(5n) {margin-right: 0;}
-    
-    /* /--- .sec3 */
-        /*  가운데  */
-    .sec3 .ex .showCase .center .innerCase:hover .mainImg {opacity: 0.4; box-shadow: none;}
-    .sec3 .ex .showCase .center .innerCase:hover .pin {opacity: 0;}
-    .sec3 .ex .showCase .center .innerCase:hover .innerTxt {display: block; width: 100%; position: absolute; top: 47%; text-align: center; box-sizing: border-box; font-family: 'arita-dotum-medium'; font-weight: normal; font-size: 18px; text-shadow: 0px 1px 4px rgba(30, 30, 30, 0.8); color: #ddd;}
-
-    .sec3 .ex .showCase .center .innerCase .innerTxt a {margin-left: 12px;}
-    .sec3 .ex .showCase .innerCase .innerTxt {display: none;}
-    /*---/container/---*/
 }
 
 
@@ -175,16 +175,9 @@ footer span:after {content: ""; display: inline-block; width: 20px; height: 5px;
     .sec2 .progress .doThis:nth-child(4n) {margin-right: 0;}
     
     /* /--- .sec3 */
-    .sec3 .ex {margin: 25vh auto 0;}
-    .sec3 .ex .showCase .innerCase {width: 80%; margin: 10vh auto 0;}
-    .sec3 .ex .showCase .innerCase .innerTxt {display: none;}
-    
-    .sec3 .ex .showCase .center .innerCase .innerTxt {display: block;  width: 60%; margin: 20px auto; text-align: center;}
-    .sec3 .ex .showCase .center .innerCase .innerTxt a {margin-left: 12px;}
-    
-    .sec3 .arr {top: 88vh;}
-    .sec3 .arr span.left {margin-right: 16px;}
-    
+    .sec3 .ex {margin: 25vh auto;}
+    .sec3 .ex .pages li {width: 100%; margin: 3.5% auto;}
+    .sec3 .ex .pages li .innerTxt {font-size: 2vw; opacity: 1;}
 }
 
 
@@ -212,17 +205,10 @@ footer span:after {content: ""; display: inline-block; width: 20px; height: 5px;
     .sec2 .progress .doThis:nth-child(2n) {margin-right: 0;}
     
     /* /--- .sec3 */
-    .sec3 .ex {margin: 25vh auto 0;}
-    
-    .sec3 .ex .showCase .innerCase {width: 90%; margin: 10vh auto 0;}
-    .sec3 .ex .showCase .innerCase .innerTxt {display: none;}
-    
-    .sec3 .ex .showCase .center .innerCase .innerTxt {display: block;  width: 80%; margin: 20px auto; text-align: center;}
-    .sec3 .ex .showCase .center .innerCase .innerTxt a {display: block; margin-left: 0; margin-top: 12px;}
-    
-    .sec3 .arr {top: 82vh;}
-    .sec3 .arr span.left {margin-right: 20px;}
-    
+    .sec3 .ex {margin: 25vh auto;}
+    .sec3 .ex .pages {width: 90%;}
+    .sec3 .ex .pages li {width: 100%; margin: 3.5% auto;}
+    .sec3 .ex .pages li .innerTxt {font-size: 3.5vw; opacity: 1;}
     
     /*FOOTER*/
     footer h5 {font-size: 4.8vw;}
@@ -231,17 +217,7 @@ footer span:after {content: ""; display: inline-block; width: 20px; height: 5px;
 }
 
 
-/* ANIMATION */
-@keyframes FadeSwipe {
-    0% {opacity: 0; background-size: 0% 100%;}
-    20% {opacity: 1;}
-    100% {opacity: 1; background-size: 100% 100%;}
-}
 
-@keyframes FadeIn { 0% {opacity: 0;} 100% {opacity: 1;} }
-
-@keyframes under-bar { 0% { width: 0; } 100% { width: 16px; } }
-/*---/animation/---*/
 
 
 
