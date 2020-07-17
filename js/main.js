@@ -153,7 +153,7 @@ $(document).ready(function(){
                         + '<img class="mainImg" src="img/portfolio'+ num +'-main.jpg">'
                         + '<div class="innerTxt">'
                         + ' <span>' + Txt + '</span>'
-                        + ' <a href="' + urls + '/" target="_blank"><i class="fas fa-external-link-alt"></i></a>'
+                        + ' <a href="' + urls + '" target="_blank"><i class="fas fa-external-link-alt"></i></a>'
                         + '</div>'
                         + '</div>';
         
