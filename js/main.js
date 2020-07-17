@@ -154,6 +154,7 @@ $(document).ready(function(){
                         + '<div class="innerTxt">'
                         + ' <span>' + Txt + '</span>'
                         + ' <a href="' + urls + '" target="_blank"><i class="fas fa-external-link-alt"></i></a>'
+                        + ' <span class="urls">' + urls + '</span>'
                         + '</div>'
                         + '</div>';
         
