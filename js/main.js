@@ -74,10 +74,11 @@ $(document).ready(function(){
     // 스크롤 따라 nav 변화
     $(window).scroll(function(){
         var sct = $(window).scrollTop();
-        var maxTop = $(document).height() - $(window).height();
-        var bt = 70 * (sct/maxTop);
+        var scb = sct + ht/2;
+        var maxTop = $(document).height() - ht;
+//        var bt = 70 * (sct/maxTop);
         
-        if(sct >= ht*0 && sct < ht*1-50){
+        if(sct >= ht*0 && scb < ht*1-50){
             $(".nav-scroll").removeClass('on');
             $(".nav-scroll").eq(0).addClass('on');
             $(".nav-menu").removeClass('on');
@@ -88,7 +89,7 @@ $(document).ready(function(){
             
             $(".cont").removeClass("on");
         }
-        if(sct >= ht*1 && sct < $(".sec3").offset().top-50){
+        if(scb >= ht*1 && scb < $(".sec3").offset().top-50){
             $(".nav-scroll").removeClass('on');
             $(".nav-scroll").eq(1).addClass('on');
             $(".nav-menu").removeClass('on');
@@ -101,7 +102,7 @@ $(document).ready(function(){
             $(".cont").removeClass("on");
             $(".sec2 .cont").addClass("on");
         }
-        if(sct >= $(".sec3").offset().top-50){
+        if(scb >= $(".sec3").offset().top-50){
             $(".nav-scroll").removeClass('on');
             $(".nav-scroll").eq(2).addClass('on');
             $(".nav-menu").removeClass('on');
