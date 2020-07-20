@@ -72,18 +72,22 @@ $(document).ready(function(){
     });
     
     // 스크롤 따라 nav 변화
+    const txt1 = $(".sec1 .innerTxt");
+    const top1 = txt1.offset().top;
     $(window).scroll(function(){
         var sct = $(window).scrollTop();
-        var scb = sct + ht/2;
+        var scb = sct + ht/3;
         var maxTop = $(document).height() - ht;
 //        var bt = 70 * (sct/maxTop);
+        var v = sct/ht;
         
         if(sct >= ht*0 && scb < ht*1-50){
             $(".nav-scroll").removeClass('on');
             $(".nav-scroll").eq(0).addClass('on');
             $(".nav-menu").removeClass('on');
             $(".nav-menu").eq(0).addClass('on');
-            $(".sec1 > .insideBox").show().addClass('on');
+            $(".sec1 > .insideBox").show().addClass('on').css({'opacity':1-v});
+            txt1.css({'top': top1 + (v*100)});
             
             $("h3").removeClass('on');
             
@@ -120,6 +124,9 @@ $(document).ready(function(){
     // NAV ** //
     
     
+    // ** SECTION ** .sec1 - PROFILE
+    // --
+    
     
     // ** SECTION ** .sec2 - PROGRESS BAR
     $(".doThis").click(function(){
@@ -128,11 +135,14 @@ $(document).ready(function(){
         progressBar();
     });
     
-    $(".linear-progress .back").append("<div class='shadow'></div>");
+    if( !($(".progress .back").children('div').hasClass('shadow')) ) {
+        $(".linear-progress .back").append("<div class='shadow'></div>");
+    } else return
     progressBar();
     
     function progressBar() {
         var tit = $(".doThis.show").text();
+        var title = '<img >';
         var percentage = $(".doThis.show").data("percentage");
         var barwidth = percentage + "%";
         

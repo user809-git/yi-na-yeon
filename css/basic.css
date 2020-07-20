@@ -55,7 +55,7 @@ header h1 a img {display: block; height: 100%;}
 
 /*CONTAINER*/
 #container {width: 100%; height: 100%;}
-section {display: block; width: 100%; height: auto; overflow: hidden; margin: 0 auto; padding: 200px auto 150px;transition: all 1s; background-color: #111; position: relative;}
+section {display: block; width: 100%; height: auto; overflow: hidden; margin: 0 auto; padding: 200px auto 150px;transition: all 1s; background-color: #1a1a1a; position: relative;}
     /*
     .sec2 {background-color: #222;}
     .sec3 {background-color: #222;}
@@ -75,12 +75,15 @@ section h3.on {display: block; transition: 1.8s; animation: FadeSwipe 1.8s; opac
 .cont.on {animation: FadeIn 2s; opacity: 1;}
 
 /* /--- .sec1 */
-.sec1 .head1 {width: 100%; text-align: center; line-height: 1; font-size: 42px; font-family: 'arita-dotum-thin'; font-weight: normal; color: #fff; transition-delay: 0.2s; position: fixed; top: 46vh; letter-spacing: 0.09em;}
-.sec1 .head2 {width: 100%; text-align: center; line-height: 1; font-size: 30px; font-family: 'arita-dotum-thin'; font-weight: normal; color: #fff; transition-delay: 0.4s; position: fixed; top: calc(46vh + 46px); letter-spacing: 0.02em;}
-.sec1 .insideBox {width: 100%; height: 100%; margin: 0 auto; box-sizing: border-box; background: url('../img/backimg_section.jpg') no-repeat center; background-size: cover; opacity: 0;}
-.sec1 .insideBox.on {position: fixed; left: 0; top: 0; right: 0; bottom: 0; opacity: 1; z-index: 40; transition: all 0.7s;}
+.sec1 .insideBox {width: 100%; height: 100%; margin: 0 auto; box-sizing: border-box; background: url('../img/backimg_section.jpg') no-repeat center; background-size: cover; opacity: 0; _transition: all 0.7s;}
+.sec1 .insideBox.on {position: fixed; left: 0; top: 0; right: 0; bottom: 0; opacity: 1; z-index: 38;}
+.sec1 .innerTxt {position: absolute; width: 100%; top: 46%; transform: translateZ(-1px) scale(1.1);}
+.sec1 .head1 {width: 100%; text-align: center; line-height: 1; font-size: 42px; font-family: 'arita-dotum-thin'; font-weight: normal; color: #fff; transition-delay: 0.2s; letter-spacing: 0.09em;}
+.sec1 .head2 {width: 100%; text-align: center; line-height: 1; font-size: 30px; font-family: 'arita-dotum-thin'; font-weight: normal; color: #fff; transition-delay: 0.4s; letter-spacing: 0.02em;}
+
 
 /* /--- .sec2 */
+.sec2 {z-index: 40;}
 .sec2 .progress {width: 780px; margin: 25vh auto 30vh;}
 .sec2 .progress .skills {width: 100%; margin-bottom: 20vh;}
 .sec2 .progress .doThis { display: inline-block; background-color: #111; border: 1px solid #aaa; margin-right: 1%; margin-bottom: 1%; color: #aaa; cursor: pointer; font-family: 'arita-dotum-medium'; font-weight: normal; text-align: center; line-height: 2.5; width: 18.9%; float: left;}
@@ -102,6 +105,7 @@ background: linear-gradient(to bottom,  #555, transparent); /* W3C, IE10+, FF16+
 }
 
 /* /--- .sec3 */
+.sec3 {z-index: 40;}
 .sec3 .ex {width: 100%; min-height: 100vh; height: auto; margin: 20vh auto; overflow: hidden; position: relative;}
 .sec3 .ex .pages {width: 80%; height: 100%; margin: 0 auto; font-size: 0;}
 .sec3 .ex .pages li {display: block; width: 48%; height: auto; overflow: hidden; margin: 2% 1%; vertical-align: top; float: left; transition: transform 0.2s ease-in-out;}
@@ -115,7 +119,7 @@ background: linear-gradient(to bottom,  #555, transparent); /* W3C, IE10+, FF16+
 .sec3 .ex .pages li:hover .mainImg {opacity: 0.75; filter: blur(2px);}
 .sec3 .ex .pages li .innerTxt {width: 100%; font-size: 1.4vw; text-align: center; position: absolute; top: 45%; text-shadow: 0px 1px 3px #111; opacity: 0; transition: transform 0.2s ease-in-out, opacity 0.1s ease-in;}
 .sec3 .ex .pages li .innerTxt span {font-family: 'arita-dotum-bold';}
-.sec3 .ex .pages li .innerTxt .urls {display: block; font-family: 'arita-dotum-medium'; font-size: 0.8em; margin: 5px auto; color: #fff; opacity: 0.8;}
+.sec3 .ex .pages li .innerTxt .urls {display: block; font-family: 'arita-dotum-medium'; font-size: 0.75em; margin: 5px auto; color: #fff; opacity: 0.8;}
 .sec3 .ex .pages li:hover .innerTxt {
     opacity: 1;
     transform: translateY(-10px);
