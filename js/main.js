@@ -6,31 +6,9 @@ $(document).ready(function(){
     var wd = sec1.outerWidth();
 
     $(window).on("resize", function(){
+        
         sec1.innerHeight(ht);
         
-        // 자동 새로고침
-        /*
-        var ww = sec1.outerWidth();
-        if (wd > 1024) {
-            if (ww <= 1024) {
-                location.reload();
-                $("html, body").stop().animate({'scrollTop':0});
-            }
-        } else if (wd <= 1024 && wd >= 768) {
-            if (ww > 1024) {
-                location.reload();
-                $("html, body").stop().animate({'scrollTop':0});
-            } else if (ww < 768) {
-                location.reload();
-                $("html, body").stop().animate({'scrollTop':0});
-            }
-        } else if (wd < 768) {
-            if (ww >= 768) {
-                location.reload();
-                $("html, body").stop().animate({'scrollTop':0});
-            }
-        } else return
-        */
     });
     
     
