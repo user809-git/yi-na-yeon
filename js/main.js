@@ -76,7 +76,7 @@ $(document).ready(function(){
             $(".nav-scroll").eq(1).addClass('on');
             $(".nav-menu").removeClass('on');
             $(".nav-menu").eq(1).addClass('on');
-            $(".sec1 > .insideBox").removeClass('on');
+            $(".sec1 > .insideBox").removeClass('on').css({'opacity':0});
             
             $("h3").removeClass('on');
             $(".sec2 > h3").addClass('on');
@@ -89,7 +89,7 @@ $(document).ready(function(){
             $(".nav-scroll").eq(2).addClass('on');
             $(".nav-menu").removeClass('on');
             $(".nav-menu").eq(2).addClass('on');
-            $(".sec1 > .insideBox").removeClass('on');
+            $(".sec1 > .insideBox").removeClass('on').css({'opacity':0});
             
             $("h3").removeClass('on');
             $(".sec3 > h3").addClass('on');
