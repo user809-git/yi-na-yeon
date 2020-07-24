@@ -95,9 +95,9 @@ section h3.on .reveal {transition: all 1.8s; animation: revealed 1s ease-in-out;
 transform: skew(15deg); /* Standard syntax */
 -ms-transform: skew(15deg); /* IE 9 */
 transform-origin: 0 0;
-background: -webkit-linear-gradient(top,  #333, transparent); /* Chrome10-25,Safari5.1-6 */
-background: -moz-linear-gradient(top,  #333, transparent); /* FF3.6-15 */
-background: linear-gradient(to bottom,  #333, transparent); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+background: -webkit-linear-gradient(top,  #555, transparent); /* Chrome10-25,Safari5.1-6 */
+background: -moz-linear-gradient(top,  #555, transparent); /* FF3.6-15 */
+background: linear-gradient(to bottom,  #555, transparent); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 /* /--- .sec3 */
