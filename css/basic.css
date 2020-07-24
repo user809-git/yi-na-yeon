@@ -156,7 +156,7 @@ footer.clicked {height: 2.75em; border-radius: 1.375em;}
 footer p {margin: 0 0 5px; font-size: 0.75em; font-family: 'arita-dotum-thin'; font-weight: normal; color: #fff; letter-spacing: 2px;}
 footer a {color: #fff; font-family: 'arita-dotum-semibold'; word-break: keep-all;}
 footer a:hover {text-decoration: underline;}
-footer:after {content: ""; display: block; width: 100%; height: 0.5em; position: absolute;
+footer:after {content: ""; display: block; width: 100%; height: 0.45em; position: absolute;
 left: 0; bottom: 0; background: #1f1f1f;}
 /*---/footer/---*/
 
