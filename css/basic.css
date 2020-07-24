@@ -242,7 +242,7 @@ left: 0; bottom: 0; background: #1f1f1f;}
     .sec3 .ex .pages {width: 90%;}
     .sec3 .ex .pages li {width: 100%; margin: 4% auto;}
     .sec3 .ex .pages li .innerTxt {font-size: 3.5vw; opacity: 1;}
-    .sec3 .ex .pages li .status {font-size: 2.5vw;}
+    .sec3 .ex .pages li .status {font-size: 4vw;}
     
     /*FOOTER*/
     footer {height: 2.25em; width: 68vw; padding: 0.625em 0; left: 16vw; border-radius: 1.125em; font-size: 4.8vw;}
