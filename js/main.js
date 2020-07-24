@@ -51,7 +51,7 @@ $(document).ready(function(){
     
     // 스크롤 따라 nav 변화
     const txt1 = $(".sec1 .innerTxt");
-    const top1 = txt1.offset().top;
+    const top1 = ht * 0.46;
     $(window).scroll(function(){
         var sct = $(window).scrollTop();
         var scb = sct + ht/3;
@@ -76,7 +76,7 @@ $(document).ready(function(){
             $(".nav-scroll").eq(1).addClass('on');
             $(".nav-menu").removeClass('on');
             $(".nav-menu").eq(1).addClass('on');
-            $(".sec1 > .insideBox").removeClass('on').hide();
+            $(".sec1 > .insideBox").removeClass('on');
             
             $("h3").removeClass('on');
             $(".sec2 > h3").addClass('on');
@@ -89,7 +89,7 @@ $(document).ready(function(){
             $(".nav-scroll").eq(2).addClass('on');
             $(".nav-menu").removeClass('on');
             $(".nav-menu").eq(2).addClass('on');
-            $(".sec1 > .insideBox").removeClass('on').hide();
+            $(".sec1 > .insideBox").removeClass('on');
             
             $("h3").removeClass('on');
             $(".sec3 > h3").addClass('on');
@@ -113,8 +113,8 @@ $(document).ready(function(){
         progressBar();
     });
     
-    if( !($(".progress .back").children('div').hasClass('shadow')) ) {
-        $(".linear-progress .back").append("<div class='shadow'></div>");
+    if( !($(".progress").children('div').hasClass('shadow')) ) {
+        $(".linear-progress").append("<div class='shadow'></div>");
     } else return
     progressBar();
     
@@ -135,22 +135,30 @@ $(document).ready(function(){
     $(".pages li").each(function() {
         var num = $(this).data("number");
         var urls = $(this).data("urls");
+        var info = $(this).data("info");
         var Txt = $(this).text();
         
             var eachPages = '<div class="innerCase">'
+                        + '<a href="' + urls + '" target="_blank">'
                         + '<img class="mainImg" src="img/portfolio'+ num +'-main.jpg">'
                         + '<div class="innerTxt">'
                         + ' <span>' + Txt + '</span>'
-                        + ' <a href="' + urls + '" target="_blank"><i class="fas fa-external-link-alt"></i></a>'
+                        + ' <i class="fas fa-external-link-alt"></i>'
                         + ' <span class="urls">' + urls + '</span>'
                         + '</div>'
+                        + ' <div class="status">'
+                        + ' <p class="info">' + info + '</p>'
+                        + ' <p class="use">HTML5, CSS3, Javascript, jQuery</p>'
+                        + ' <i class="fas fa-plus-circle link-icon"></i>'
+                        + '</div>'
+                        + '</a>'
                         + '</div>';
         
             $(this).html(eachPages);
         
     });
     
-    
+    console.log();
     // ** SECTION ** //
 });
 
