@@ -143,7 +143,6 @@ $(document).ready(function(){
                         + '<img class="mainImg" src="img/portfolio'+ num +'-main.jpg">'
                         + '<div class="innerTxt">'
                         + ' <span>' + Txt + '</span>'
-                        + ' <i class="fas fa-external-link-alt"></i>'
                         + ' <span class="urls">' + urls + '</span>'
                         + '</div>'
                         + ' <div class="status">'
