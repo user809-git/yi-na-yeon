@@ -106,9 +106,6 @@ $(document).ready(function(){
     // NAV ** //
     
     
-    // ** SECTION ** .sec1 - PROFILE
-    // --
-    
     
     // ** SECTION ** .sec2 - PROGRESS BAR
     $(".doThis").click(function(){
