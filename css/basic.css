@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 @charset "UTF-8"
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
     
 /*reset*/
     * {margin: 0; padding: 0;}
@@ -57,7 +57,7 @@ header h1 a img {display: block; height: 100%;}
 
 /*CONTAINER*/
 #container {width: 100%; height: 100%;}
-section {display: block; width: 100%; height: auto; overflow: hidden; margin: 0 auto; padding: 200px auto 150px;transition: all 1s; background-color: #1f1f1f; position: relative;}
+section {display: block; width: 100%; height: auto; overflow: hidden; margin: 0 auto; padding: 200px 0 150px;transition: all 1s; background-color: #1f1f1f; position: relative;}
 section h3 {width: 100%; text-align: center; line-height: 1; font-size: 50px; font-family: 'arita-dotum-thin'; font-weight: bolder; display: none; position: absolute; top: 90px; opacity: 0; cursor: none; z-index: 45;}
 section h3.on {display: block; transition: 1.8s; animation: FadeSwipe 1.8s; opacity: 1; background-size: 100% 100%;}
 .cont {opacity: 0;}
@@ -80,7 +80,7 @@ section h3.on .reveal {transition: all 1.8s; animation: revealed 1s ease-in-out;
 
 /* /--- .sec2 */
 .sec2 {z-index: 40;}
-.sec2 .progress {width: 780px; margin: 25vh auto 30vh;}
+.sec2 .progress {width: 780px; margin: 15vh auto 30vh;}
 .sec2 .progress .skills {width: 100%; margin-bottom: 20vh;}
 .sec2 .progress .doThis {display: inline-block; border: 1px solid #888; margin-right: 1%; margin-bottom: 1%; color: #aaa; cursor: pointer; font-family: 'arita-dotum-medium'; font-weight: normal; text-align: center; line-height: 40px; height:40px; width: 18.9%; float: left; border-radius: 20px;}
 .sec2 .progress .doThis.show {color: #fff; border-color: #fff; font-family: 'arita-dotum-semibold';}
@@ -90,19 +90,19 @@ section h3.on .reveal {transition: all 1.8s; animation: revealed 1s ease-in-out;
 .sec2 .progress .title {margin: 0; line-height: 1.5; font-size: 16px; font-family: 'arita-dotum-semibold'; font-weight: normal; display: inline-block;}
 .sec2 .progress .info {margin: 0; line-height: 2.1; font-size: 14px; font-family: 'arita-dotum-medium'; font-weight: normal; float: right;}
 .sec2 .progress .back {width: 100%; height: 6px; margin-top: 7px; background: #333; border-radius: 3px; overflow: hidden;}
-.sec2 .progress .bar {width: 10px; height: 6px; background: #888;}
+.sec2 .progress .bar {width: 10px; height: 6px; background: #aaa;}
 .sec2 .progress .shadow {width: 10px; opacity: .8;
 transform: skew(15deg); /* Standard syntax */
 -ms-transform: skew(15deg); /* IE 9 */
 transform-origin: 0 0;
-background: -webkit-linear-gradient(top,  #555, transparent); /* Chrome10-25,Safari5.1-6 */
-background: -moz-linear-gradient(top,  #555, transparent); /* FF3.6-15 */
-background: linear-gradient(to bottom,  #555, transparent); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+background: -webkit-linear-gradient(top,  rgba(136,136,163,0.5), rgba(16,16,16,0)); /* Chrome10-25,Safari5.1-6 */
+background: -moz-linear-gradient(top,  rgba(136,136,163,0.5), rgba(16,16,16,0)); /* FF3.6-15 */
+background: linear-gradient(to bottom,  rgba(136,136,163,0.5), rgba(16,16,16,0)); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 /* /--- .sec3 */
 .sec3 {z-index: 40;}
-.sec3 .ex {width: 100%; min-height: 100vh; height: auto; margin: 20vh auto; overflow: hidden; position: relative;}
+.sec3 .ex {width: 100%; min-height: 100vh; height: auto; margin: 10vh auto; overflow: hidden; position: relative;}
 .sec3 .ex .pages {display: block; width: 80%; height: 100%; margin: 0 auto; font-size: 0;}
 .sec3 .ex .pages li {display: inline-block; width: 31%; height: auto; overflow: hidden; margin: 2.5% 1.06%; vertical-align: top; transition: all 0.5s, transform 0.2s ease-in-out; font-size: 0; border-radius: 20px; border: 1px solid #888; background: rgb(25,25,25);}
 
@@ -140,8 +140,8 @@ footer {
 }
 footer h5 {font-size: 1em; font-family: 'arita-dotum-thin'; font-weight: normal; letter-spacing: 2px; margin: 0;}
 footer.clicked {height: 2.75em; border-radius: 1.375em;}
-footer p {margin: 0 0 5px; font-size: 0.75em; font-family: 'arita-dotum-thin'; font-weight: normal; color: #fff; letter-spacing: 2px;}
-footer a {color: #fff; font-family: 'arita-dotum-semibold'; word-break: keep-all;}
+footer p {margin: 0 0 5px; font-size: 0.75em; font-family: 'arita-dotum-thin'; font-weight: normal; color: #fff; letter-spacing: 0.02em; }
+footer a {color: #fff; font-family: 'arita-dotum-semibold'; word-break: keep-all; }
 footer a:hover {text-decoration: underline;}
 footer:after {content: ""; display: block; width: 100%; height: 0.45em; position: absolute;
 left: 0; bottom: 0; background: #1f1f1f;}
@@ -207,7 +207,7 @@ left: 0; bottom: 0; background: #1f1f1f;}
     .sec2 .progress .doThis:nth-child(4n) {margin-right: 0;}
     
     /* /--- .sec3 */
-    .sec3 .ex {margin: 25vh auto;}
+    .sec3 .ex {margin: 12vh auto;}
     .sec3 .ex .pages {width: 90%;}
     .sec3 .ex .pages li {width: 48%; margin: 3% 0.85%;}
     .sec3 .ex .pages li .innerTxt {font-size: 2vw; opacity: 1;}
@@ -244,13 +244,13 @@ left: 0; bottom: 0; background: #1f1f1f;}
     .sec3 .ex {margin: 25vh auto;}
     .sec3 .ex .pages {width: 90%;}
     .sec3 .ex .pages li {width: 100%; margin: 4% auto;}
-    .sec3 .ex .pages li .innerTxt {font-size: 4vw; opacity: 1;}
+    .sec3 .ex .pages li .innerTxt {top: 27%; font-size: 4vw; opacity: 1;}
     .sec3 .ex .pages li .status {font-size: 4vw;}
     
     /*FOOTER*/
-    footer {height: 2.25em; width: 68vw; padding: 0.625em 0; left: 16vw; border-radius: 1.125em; font-size: 4.8vw;}
+    footer {height: 2.25em; width: 70vw; padding: 0.625em 0; left: 15vw; border-radius: 1.125em; font-size: 4.8vw;}
     footer.clicked {height: 3em; border-radius: 1.5em;}
-    footer:after {height: 0.625em;}
+    footer:after {height: 0.55em;}
 }
 
 

@@ -58,13 +58,17 @@ $(document).ready(function(){
         var maxTop = $(document).height() - ht;
 //        var bt = 70 * (sct/maxTop);
         var v = sct/ht;
+        if(v >= 0 && v <= 1) {
+            $(".sec1 > .insideBox").css({'opacity':1-v});
+        }
+        
         
         if(sct >= ht*0 && scb < ht*1-50){
             $(".nav-scroll").removeClass('on');
             $(".nav-scroll").eq(0).addClass('on');
             $(".nav-menu").removeClass('on');
             $(".nav-menu").eq(0).addClass('on');
-            $(".sec1 > .insideBox").show().addClass('on').css({'opacity':1-v});
+            $(".sec1 > .insideBox").show().addClass('on');
             txt1.css({'top': top1 + (v*100)});
             
             $("h3").removeClass('on');
