@@ -48,6 +48,12 @@ $(document).ready(function(){
         var tt = section.offset().top;
         $('html, body').stop().animate({scrollTop:tt}, 700);
     });
+    var nextPage = $(".sec1 .next");
+    nextPage.click(function(){
+        var section = contents.eq(1);
+        var tt = section.offset().top;
+        $('html, body').stop().animate({scrollTop:tt}, 700);
+    });
     
     // 스크롤 따라 nav 변화
     const txt1 = $(".sec1 .innerTxt");
