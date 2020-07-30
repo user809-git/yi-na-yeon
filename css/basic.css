@@ -268,13 +268,13 @@ left: 0; bottom: 0; background: #1f1f1f;}
     .hide {display: none;}
     
     /* /--- .sec2 */
-    .sec2 .progress {width: 80%; margin-top: 180px;}
+    .sec2 .progress {width: 80%; margin-top: 3vh;}
     .sec2 .progress .skills {margin-bottom: 6vh;}
     .sec2 .progress .doThis {width: 47.5%; line-height: 40px; margin-right: 1.2%; margin-bottom: 2%;}
     .sec2 .progress .doThis:nth-child(2n) {margin-right: 0;}
     
     /* /--- .sec3 */
-    .sec3 .ex {margin: 25vh auto;}
+    .sec3 .ex {margin: 3vh auto;}
     .sec3 .ex .pages {width: 90%;}
     .sec3 .ex .pages li {width: 100%; margin: 4% auto;}
     .sec3 .ex .pages li .innerTxt {top: 27%; font-size: 4vw; opacity: 1;}
