@@ -84,7 +84,7 @@ section h3.on .reveal {transition: all 1.8s; animation: revealed 1s ease-in-out;
 .sec1 .cardContent .next {width: 100%; position: absolute; left: 0; bottom: 5px; font-size: 24px; text-align: center; animation: blinkIn 0.5s infinite alternate; animation-delay: 1s;}
 @keyframes blinkIn {
     0% { opacity: 0.5; }
-    100% { opacity: 0; }
+    100% { opacity: 0.1; }
 }
 
 
