@@ -81,6 +81,11 @@ section h3.on .reveal {transition: all 1.8s; animation: revealed 1s ease-in-out;
 .sec1 .head1 {width: 100%; text-align: center; line-height: 1.05em; font-size: 30px; font-family: 'arita-dotum-semibold'; font-weight: normal; color: #fff; transition-delay: 0.4s; letter-spacing: 0.015em;}
 .sec1 .head2 {width: 100%; text-align: center; line-height: 1.05em; font-size: 30px; font-family: 'arita-dotum-thin'; font-weight: normal; color: #fff; transition-delay: 0.4s; letter-spacing: 0.015em;}
 .sec1 .cardContent {display: block; width: 100%; margin: 0; font-family: 'arita-dotum-medium'; font-weight: normal; font-size: 1rem; line-height: 1.65em; color: #dfdfdf; margin-top: 28px;}
+.sec1 .cardContent .next {width: 100%; position: absolute; left: 0; bottom: 5px; font-size: 24px; text-align: center; animation: blinkIn 0.5s infinite alternate; animation-delay: 1s;}
+@keyframes blinkIn {
+    0% { opacity: 0.5; }
+    100% { opacity: 0; }
+}
 
 
 /* /--- .sec2 */
@@ -155,6 +160,14 @@ left: 0; bottom: 0; background: #1f1f1f;}
 
 
 @media screen and (min-width:1201px) {
+    
+    /*body {
+        -ms-overflow-style: none;  IE and Edge 
+        scrollbar-width: none;  Firefox 
+    }
+    body::-webkit-scrollbar {
+        display: none;  Chrome, Safari, Opera
+    }*/
     
     /*container*/
     /* /--- .sec2 */
@@ -250,6 +263,7 @@ left: 0; bottom: 0; background: #1f1f1f;}
     .sec1 .cardContent {margin: 50px auto; width: 80%;}
     .sec1 .cardContent p {margin-bottom: 30px;}
     .sec1 .cardContent p span.mob {color: #999;}
+    .sec1 .cardContent .next {bottom: 15px;}
     .mob {display: block;}
     .hide {display: none;}
     
