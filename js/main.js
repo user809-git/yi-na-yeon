@@ -7,7 +7,7 @@ $(document).ready(function(){
 
     $(window).on("resize", function(){
         
-        sec1.innerHeight(ht);
+        sec1.outerHeight(ht);
         
     });
     
@@ -51,7 +51,7 @@ $(document).ready(function(){
     
     // 스크롤 따라 nav 변화
     const txt1 = $(".sec1 .innerTxt");
-    const top1 = ht * 0.46;
+    const top1 = (ht - txt1.outerHeight())/2;
     $(window).scroll(function(){
         var sct = $(window).scrollTop();
         var scb = sct + ht/3;
@@ -105,6 +105,8 @@ $(document).ready(function(){
     });
     // NAV ** //
     
+    
+    // ** SECTION ** .sec1 - PROFILE CARD
     
     
     // ** SECTION ** .sec2 - PROGRESS BAR
