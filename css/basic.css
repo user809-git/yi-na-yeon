@@ -156,14 +156,6 @@ left: 0; bottom: 0; background: #1f1f1f;}
 
 @media screen and (min-width:1201px) {
     
-    /*body {
-        -ms-overflow-style: none;  IE and Edge 
-        scrollbar-width: none;  Firefox 
-    }
-    body::-webkit-scrollbar {
-        display: none;  Chrome, Safari, Opera
-    }*/
-    
     /*container*/
     /* /--- .sec2 */
     .sec2 .progress .doThis:nth-child(5n) {margin-right: 0;}
