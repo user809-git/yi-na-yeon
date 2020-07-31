@@ -65,7 +65,7 @@ $(document).ready(function(){
 //        var bt = 70 * (sct/maxTop);
         var v = sct/ht;
         if(v >= 0 && v <= 1) {
-            $(".sec1 > .insideBox").css({'opacity':1-v});
+            $(".sec1 > .insideBox").css({'opacity':1-v, 'transform': `rotate(${v*5}deg)`});
         }
         
         
