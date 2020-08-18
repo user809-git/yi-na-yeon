@@ -43,7 +43,7 @@ header h1 a img {display: block; height: 100%;}
 
 /*CONTAINER*/
 #container {width: 100%; height: 100%;}
-section {display: block; width: 100%; height: auto; overflow: hidden; margin: 0 auto; padding: 200px 0 150px;transition: all 1s; background-color: #1f1f1f; position: relative;}
+section {display: block; width: 100%; height: auto; min-height: 100vh; overflow: hidden; margin: 0 auto; padding: 200px 0 150px;transition: all 1s; background-color: #1f1f1f; position: relative;}
 section h3 {width: 100%; text-align: center; line-height: 1; font-size: 50px; font-family: 'arita-dotum-thin'; font-weight: bolder; display: none; position: absolute; top: 90px; opacity: 0; cursor: none; z-index: 45;}
 section h3.on {display: block; opacity: 1;}
 .cont {opacity: 0;}
