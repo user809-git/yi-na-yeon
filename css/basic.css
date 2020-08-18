@@ -157,6 +157,9 @@ left: 0; bottom: 0; background: #1f1f1f;}
 /*---/footer/---*/
 
 
+@media screen and (-ms-high-contrast:active), all and (-ms-high-contrast:none) {
+    .ie-alert {display: block; max-width: 1000px; height: 3rem; position: fixed; z-index: 999; top: 1rem; right: 2rem; background-color: white; color: #111; font-weight: bold; font-size: 1rem; text-align: center; line-height: 3rem;}
+}
 
 @media screen and (min-width:1201px) {
     
