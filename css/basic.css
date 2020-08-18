@@ -158,7 +158,11 @@ left: 0; bottom: 0; background: #1f1f1f;}
 
 
 @media screen and (-ms-high-contrast:active), all and (-ms-high-contrast:none) {
-    .ie-alert {display: block; max-width: 1000px; height: 3rem; position: fixed; z-index: 999; top: 1rem; right: 2rem; background-color: white; color: #111; font-weight: bold; font-size: 1rem; text-align: center; line-height: 3rem;}
+    .ie-alert {display: block; max-width: 1000px; height: 3rem; position: fixed; z-index: 999; top: 1rem; right: 2rem; background-color: white; color: #111; font-weight: bold; font-size: 1rem; text-align: center; line-height: 3rem; padding: 0 1rem;}
+    section h3,
+    .sec1 .insideBox {opacity: 1; display: block;}
+    .cont {opacity: 1;}
+    section h3 .reveal {width: 0%;}
 }
 
 @media screen and (min-width:1201px) {
