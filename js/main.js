@@ -139,34 +139,7 @@ $(document).ready(function(){
         $(".linear-progress .shadow").stop().animate({'width': barwidth, 'height':40});
     }
     
-    
-    // ** SECTION ** .sec3 - PROJECT EXAMPLE
-    $(".pages li").each(function() {
-        var num = $(this).data("number");
-        var urls = $(this).data("urls");
-        var info = $(this).data("info");
-        var Txt = $(this).text();
-        
-            var eachPages = '<div class="innerCase">'
-                        + '<a href="' + urls + '" target="_blank">'
-                        + '<img class="mainImg" src="img/portfolio'+ num +'-main.jpg">'
-                        + '<div class="innerTxt">'
-                        + ' <span>' + Txt + '</span>'
-                        + ' <span class="urls">' + urls + '</span>'
-                        + '</div>'
-                        + ' <div class="status">'
-                        + ' <p class="info">' + info + '</p>'
-                        + ' <p class="use">HTML5, CSS3, Javascript, jQuery</p>'
-                        + ' <i class="fas fa-plus-circle link-icon"></i>'
-                        + '</div>'
-                        + '</a>'
-                        + '</div>';
-        
-            $(this).html(eachPages);
-        
-    });
-    
-    console.log();
+   
     // ** SECTION ** //
 });
 
