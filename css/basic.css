@@ -168,7 +168,7 @@ left: 0; bottom: 0; background: #1f1f1f;}
     .sec1 .insideBox {opacity: 1; display: block;}
     .cont {opacity: 1;}
     section h3 .reveal {width: 0%;}
-    .sec2 .progress .doThis {position: relative; overflow: hidden; color: #fff; border-color: #fff;}
+    .sec2 .progress .doThis {position: relative; overflow: hidden; color: #888; border-color: #888;}
     .sec2 .progress .doThis:before {content: ''; display: block; width: 90%; height: 100%; position: absolute; top: 0; left: 0; background-color: rgba(255,255,255,0.25); }
     .sec2 .progress .doThis:nth-child(1):before { width: 99%; }
     .sec2 .progress .doThis:nth-child(2):before { width: 98%; }
