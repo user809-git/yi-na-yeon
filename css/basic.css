@@ -158,11 +158,23 @@ left: 0; bottom: 0; background: #1f1f1f;}
 
 
 @media screen and (-ms-high-contrast:active), all and (-ms-high-contrast:none) {
+    /* CSS for only IE*/
     .ie-alert {display: block; max-width: 1000px; height: 3rem; position: fixed; z-index: 999; top: 1rem; right: 2rem; background-color: white; color: #111; font-weight: bold; font-size: 1rem; text-align: center; line-height: 3rem; padding: 0 1rem;}
     section h3,
     .sec1 .insideBox {opacity: 1; display: block;}
     .cont {opacity: 1;}
     section h3 .reveal {width: 0%;}
+    .sec2 .progress .doThis:before {content: ''; display: block; width: 90%; height: 100%; position: absolute; top: 0; left: 0; background-color: rgba(255,255,255,0.25); }
+    .sec2 .progress .doThis:nth-child(1):before { width: 99%; }
+    .sec2 .progress .doThis:nth-child(2):before { width: 98%; }
+    .sec2 .progress .doThis:nth-child(3):before { width: 95%; }
+    .sec2 .progress .doThis:nth-child(4):before { width: 96%; }
+    .sec2 .progress .doThis:nth-child(5):before { width: 95%; }
+    .sec2 .progress .doThis:nth-child(6):before { width: 93%; }
+    .sec2 .progress .doThis:nth-child(7):before { width: 95%; }
+    .sec2 .progress .doThis:nth-child(8):before { width: 88%; }
+    .sec2 .progress .doThis:nth-child(9):before { width: 85%; }
+    .sec2 .progress .doThis:nth-child(10):before { width: 83%; }
 }
 
 @media screen and (min-width:1201px) {
