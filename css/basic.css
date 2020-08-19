@@ -162,8 +162,8 @@ left: 0; bottom: 0; background: #1f1f1f;}
     .ie-alert {display: block; max-width: 1000px; height: 3rem; position: fixed; z-index: 999; top: 1rem; right: 2rem; background-color: white; color: #111; font-weight: bold; font-size: 1rem; text-align: center; line-height: 3rem; padding: 0 1rem;}
     .nav-scroll {height: 60px;}
     .nav-scroll.on {height: 60px; background-color: rgba(255, 255, 255, 0.7);}
-    .nav-menu {height: 60px;}
-    .nav-menu.on {font-family: 'arita-dotum-light'; font-weight: normal; height: 60px;}
+    .nav-menu {height: 60px; line-height: 60px;}
+    .nav-menu.on {font-family: 'arita-dotum-light'; font-weight: normal; height: 60px; line-height: 60px;}
     section h3,
     .sec1 .insideBox {opacity: 1; display: block;}
     .cont {opacity: 1;}
