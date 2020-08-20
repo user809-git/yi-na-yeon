@@ -11,6 +11,7 @@
     a, a:active, a:visited {color: inherit;}
 
     .mob {display: none;}
+    .ie-alert {display: none;}
 /*---/reset/---*/
 
 
